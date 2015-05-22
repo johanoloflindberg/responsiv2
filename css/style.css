@@ -1,0 +1,529 @@
+/*
+ * TYPSNITTSIMPORT (ROBOTO, KAFFEESATZ)
+ * ===================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic);
+
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+/*
+ * ELEMENT
+ * ===================================================================== */
+
+* {
+	/* Ingen padding. */
+	padding: 0;
+	/* Ingen margin. */
+	margin: 0;
+	
+}
+
+/* Nya semantiska element. */
+main, header, footer, address, nav, article {
+	/* Ange som blocklevelelement för de webbläsare som inte vet vad dessa element är. */
+	display: block;
+}
+
+/* <body> */
+body {
+	/* Ange en background tile som ska täcka hela body. */
+	background-image: url(../images/bgtile.gif);
+	/* Typsnittet ska vara Roboto, annars Arial, sista utvägen ett generellt sans-serif-typsnitt. */
+	font-family: 'Roboto', arial, sans-serif;
+	/* Textfärgen ska vara svart. */
+	color: rgb(0, 0, 0);
+}
+
+/* <code> */
+code {
+	/* Alla code-avsnitt ska vara inline. */
+	display: inline;
+	/* Typsnittet ska vara från monospace-familjen. */
+	font-family: 'courier new', courier, monospace;
+}
+
+/* En <div> med id't "wrapper" omsluter innehållet. */
+div#wrapper {
+	/* Bredd på 100%. */
+	width: 100%;
+	/* Maxbredd på 1000px. */
+	max-width: 1000px;
+	/* Ingen marginal topp och botten. Centrera <div>en horisontalt genom att sätta vänster och höger margin till "auto".  */
+	margin: 0 auto;
+	/* Bakgrundsfärg ska vara ljusgrå. */
+	background-color: rgb(240, 240, 240);
+	/* En liten subtil skuggning till höger om #wrapper. */
+	box-shadow: 3px 0px 3px;
+}
+
+/* <em> */
+em {
+	/* Kursiv text. */
+	font-style: italic;
+}
+
+h1 {
+	font-size: 30px;
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+
+h2 {
+	border-bottom: 1px solid rgb(200, 200, 200);
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+
+h3 {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+/* Eftersom jag har plockat bort padding och margin på alla element så måste jag lägga till det till <ul>. */
+main ul, main ol {
+	margin-left: 40px;
+}
+
+/* Jag vill ha en marginal på 10px mellan varje <li>. */
+main ul li, main ol li {
+	margin-bottom: 10px;
+}
+
+a.current {
+	color: rgb(255, 255, 255);
+}
+
+/*
+ * HEADER
+ * ===================================================================== */
+
+/* <header> */
+header {
+	/* Höjden ska vara 400px. */
+	height: 400px; 
+	/* Bottenmarginal ska vara 30px. */
+	margin-bottom: 30px;
+	/* Ingen padding topp och botten. 90px padding vänster och höger. */
+	padding: 0 90px;
+	/* Bakgrundsbilden ska vara header.jpg. */
+	background-image: url(../images/header1000x400.jpg);
+	/* Om bakgrundsbilden inte kan hämtas så visas en mörkblå bakgrund istället. */
+	background-color: rgb(0, 0, 100);
+}
+
+/* <img> med id't "logo" som befinner sig i <header>. */
+header img#logo {
+	/* Flyta till vänster. */
+	float: left; 
+	/* Bredden ska vara 250px. */
+	width: 250px; 
+	/* Höjden ska vara 80px. */
+	height: 80px;
+}
+
+/* <div>'en med id't "rightside" som befinner sig i <header>. */
+header div#rightside {
+	/* Flyta åt höger. */
+	float: right; 
+	/* Ange en bredd på 400px. */
+	width: 400px;
+}
+
+/* Alla <p> som finns i <div>'en med id't "rightside" som befinner sig i <header>. */
+header div#rightside p {
+	/* Textfärgen ska vara vit. */
+	color: rgb(255, 255, 255); 
+	/* Vänsterpadding på 15px. */
+	padding-left: 15px; 
+	/* Toppmarginal på 100px. */
+	margin-top: 100px;
+}
+
+/*
+ * NAVIGATION
+ * ===================================================================== */
+
+/* Alla <li> i <ul> som befinner sig i <nav>. */
+nav ul li {
+	/* Plocka bort "bullets". */
+	list-style-type: none;
+	/* De ska vara inline-block så att de lägger sig efter varandra. */
+	display: inline-block;
+}
+
+/* Alla <a> som befinner sig i <li> som befinner sig i <ul> som befinner sig i <nav>. */
+nav ul li a {
+	/* De ska vara block-element. */
+	display: block;
+	/* Ange padding på 0.5em topp och botten, och 15px vänster och höger. */
+	padding: 0.5em 15px;
+	/* Ta bort understrykningen. */
+	text-decoration: none;
+	/* Textfärgen ska vara ljusblå. */
+	color: rgb(210, 210, 255);
+	/* Typsnittet ska vara Yanone Kaffeesatz, annars Arial. Sista utvägen är ett generellt sans-serif typsnitt. */
+	font-family: 'Yanone Kaffeesatz', arial, sans-serif;
+}
+
+/* Alla <a> som muspekaren hovrar över som befinner sig i <li> som befinner sig i <ul> som befinner sig i <nav>. */
+nav ul li a:hover {
+	/* Textfärgen ska vara vit. */
+	color: rgb(255, 255, 255);
+}
+
+/*
+ * MAIN CONTENT
+ * ===================================================================== */
+
+/* <main> */
+main {
+	/* Ingen padding topp och botten. 90px padding vänster och höger. */
+	padding: 0 90px;
+	/* Positionera elementet relative. Detta behövs för att kunna positionera dess barnelement som absolute. */
+	position: relative;
+
+}
+
+/* Alla <article> som befinner sig i <main>. */
+main article {
+	/* Bakgrundsfärg ska vara vit. */
+	background-color: rgb(255, 255, 255);
+	/* Bredden ska vara högst 230px. */
+	max-width: 230px;
+	/* Ingen padding topp. 15px padding nere, vänster och höger. */
+	padding: 0 15px 15px 15px;
+	/* Brödtexten ska vara 12px */
+	font-size: 12px;
+}
+
+main#processanalys article {
+	max-width: 700px; 
+	margin: 0 auto;
+}
+
+/* Alla <img> som befinner sig i <article> som befinner sig i <main>. */
+main article img {
+	/* Bredden ska vara 200px. */
+	width: 200px; 
+	/* Höjden ska vara 200px. */
+	height: 200px; 
+	/* Positionera relativt. */
+	position: relative; 
+	/* Rundade hörn på ramen. 50% ger ett cirkulert element. */
+	border-radius: 50%;
+	/* Ramen ska vara 5px bred, vara helt ifylld och vit. */
+	border: 5px solid rgb(255, 255, 255);
+}
+
+/* Alla <p> som befinner sig i <article> som befinner sig i <main>. */
+main article p {
+	/* Texten ska vara 12px. */
+	font-size: 12px;
+	/* Bottenmarginal ska vara 10px. */
+	margin-bottom: 10px;
+}
+
+/* Första <p> (dvs det andra elementet) i alla <article> som befinner sig i <main>.  */ 
+main article > p:nth-child(2) {
+	/* Texten ska ha storleken 14px. */
+	font-size: 14px;
+	/* Texten ska vara kursiv. */
+	font-style: italic;
+	/* Negativ toppmarginal gör att mellanrummet mellan bilderna och texten minskar. */
+	margin-top: -90px;
+}
+
+/* <article> med id't "left" som befinner sig i <main>. */
+main article#left {
+	/* Flyta det till vänster. */
+	float: left;
+}
+
+/* Alla <img> som befinner sig i <article> med id't "left" som befinner sig i <main>. */
+main article#left img {
+	/* Placera bilden horisontalt till vänster genom att flytta den 15px åt vänster. */ 
+	 left: -15px; 
+	 /* Placera bilden vertikalt så att dess mitt är vid dess <articles>'s topp. */
+	 top: -100px;
+}
+
+/* <article> med id't "middle" som befinner sig i <main>. */
+main article#middle {
+	/* För att kunna positionera denna <article> i mitten så måste den vara positionerad
+	   absolute. Detta eftersom den ligger först av alla <article>'s i HTML-koden. Eftersom
+	   <main> är positionerad relative så är denna <article> positionerad relativt <main>. */
+	position: absolute;
+	/* 370px från vänster. 90px + 15px + 230px + 15px + 20px = 370px. */
+	left: 370px;
+}
+
+/* Alla <img> som befinner sig i <article> med id't "middle" som befinner sig i <main>. */
+main article#middle img {
+	/* Placera bilden horisontalt i mitten genom att flytta den 15px åt höger. */ 
+	left: 15px; 
+	/* Placera bilden vertikalt så att dess mitt är vid dess <articles>'s topp. */
+	top: -100px;
+}
+
+/* Alla <img> som befinner sig i <article> med id't "right" som befinner sig i <main>. */
+main article#right {
+	/* Flyta det till höger. */
+	float: right;
+
+}
+
+/* Alla <img> som befinner sig i <article> med id't "right" som befinner sig i <main>. */
+main article#right img {
+	/* Placera bilden horisontalt till höger genom att flytta den 35px åt höger. */ 
+	left: 35px; 
+	 /* Placera bilden vertikalt så att dess mitt är vid dess <articles>'s topp. */
+	top: -100px;
+}
+
+/*
+ * FOOTER
+ * ===================================================================== */
+
+/* <footer> */
+footer {
+	/* Ta bort float så <footer> inte flyter upp bakom <main>. */
+	clear: both;
+	/* Centrera elementen. */
+	text-align: center;
+	/* 20px topp och botten. 90px vänster och höger. */
+	padding: 20px 90px;
+	/* Ange en bakgrundsfärg för webbläsare som inte kan rendera linear-gradient. */
+	background-color: rgb(100, 100, 255);
+	/* Ange en linear-gradient för alla webkit-baserade webbläsare (t.ex. Chrome, Safari). */
+	background: -webkit-linear-gradient(rgb(200, 200, 255), rgb(100, 100, 255));
+	/* Ange en linear-gradient för webbläsaren Opera. */
+	background: -o-linear-gradient(rgb(200, 200, 255), rgb(100, 100, 255));
+	/* Ange en linear gradient för webbläsaren Firefox. */
+	background: -moz-linear-gradient(rgb(200, 200, 255), rgb(100, 100, 255));
+	/* Ange en linear-gradient för alla webbläsare som implementerat det som standard. */
+	background: linear-gradient(rgb(200, 200, 255), rgb(100, 100, 255));
+}
+
+/* Alla <div>'ar' i <footer>. */
+footer  div {
+	/* Texten ska vara vänsterjusterad. */
+	text-align: left;
+	/* Visa som inline-block. */
+	display: inline-block;
+}
+
+/* Första <div>'en i <footer>. */
+footer  div:first-child {
+	/* Flyta till vänster. */
+	float: left;
+}
+
+/* Sista <div>'en i <footer>. */
+footer > div:last-child {
+	/* Flyta till höger */
+	float: right;
+}
+
+/* Alla <address> i <footer>. */
+footer address {
+	/* Ta bort kursivering. */
+	font-style: normal;
+	/* Textens storlek ska vara 12px. */
+	font-size: 12px;
+}
+
+/* Alla <h1> i <footer>. */
+footer h1 {
+	/* Textens storlek ska vara 14px. */
+	font-size: 14px;
+}
+
+/*
+ * MEDIA QUERIES
+ * ===================================================================== */
+
+/*******************************************************************************************/
+/* Speciell CSS för skärmar som har en maxbredd på 1015px. *********************************/
+/*******************************************************************************************/
+
+@media screen and (max-width: 1015px), print {
+
+	/* <footer> */
+	footer {
+		/* Padding 20px topp och botten och 10px vänster och höger. */
+		padding: 20px 10px;
+	}
+
+	/* <header> */
+	header {
+		/* Bakgrundsbilden ska täcka 100% horisontalt och 400px vertikalt. */
+		background-size: 100% 400px;
+		/* Bakgrundsbilden ska inte upprepas. */
+		background-repeat: no-repeat;
+		/* Padding vänster ska vara 10px. */
+		padding-left: 10px;
+		/* Padding höger ska vara 10px. */
+		padding-right: 10px;
+	}
+
+	/* <main> */
+	main {
+		/* Padding vänster ska vara 10px. */
+		padding-left: 10px;
+		/* Padding höger ska vara 10px. */
+		padding-right: 10px;
+	}
+
+	/* Alla <article> som befinner sig i <main>. */
+	main article {
+		/* Maxbredden ska vara 400px. */
+		max-width: 400px;
+	}
+
+	/* <img> som befinner sig i <article> med id't "left" som befinner sig i <main> och
+	   <img> som befinner sig i <article> med id't "right" som befinner sig i <main> och
+	   <img> som befinner sig i <article> med id't "middle" som befinner sig i <main>. */
+	main article#left img, main article#right img, main article#middle img {
+		/* Position ska vara 0px från vänster. */
+		left: 0;
+		/* 100px upp från ursprungspositionen. */
+		top: -100px;
+		/* Visa <img> som ett block-level element. */
+		display: block;
+		/* Centrera den horisontalt. */
+		margin: 0 auto;
+	}
+	
+	/* <article> med id't "left" som befinner sig i <main>. */
+	main article#left {
+		/* Ska inte flytas. */
+		float: none;
+		/* Centreras horisontalt. 120px marginal över och under. */
+		margin: 120px auto;
+	}
+
+	/* <article> med id't "right" som befinner sig i <main>. */
+	main article#right {
+		/* Ska inte flytas. */
+		float: none;
+		/* Centreras horisontalt. 0px marginal över och under. */
+		margin: 0 auto;
+	}
+	
+	/* <article> med id't "middle" som befinner sig i <main>. */
+	main article#middle {
+		/* Den ska inte positioneras absolute längre. */
+		position: static;
+		/* Centreras horisontalt. 0px marginal över och under. */
+		margin: 0 auto;
+	}
+}
+
+/******************************************************************************************/
+/* Speciell CSS för skärmar som har en maxbredd på 800px. *********************************/
+/******************************************************************************************/
+@media screen and (max-width: 800px) {
+	/* <img> med id't "logo" som befinner sig i <header>. */
+	header img#logo {
+		/* Ta bort float. */
+		float: none;
+	}
+
+	/* <header> */
+	header {
+		/* Centrera elementen inuti <header>. */
+		text-align: center;
+		/* Bakgrundsbilden ska vara header800x400.jpg. */
+		background-image: url(../images/header800x400.jpg);
+	}
+
+	/* <div>'en med id't "rightside" som befinner sig i <header>. */
+	header div#rightside {
+		/* Ta bort float. */
+		float: none;
+		/* Bredden ska vara 100%. */
+		width: 100%;
+	}
+
+	/* Alla <p> som finns i <div>'en med id't "rightside" som befinner sig i <header>. */
+	header div#rightside p {
+		/* Bredden ska vara 90%. */
+		width: 90%;
+		/* Toppmarginal ska vara 80px. */
+		margin-top: 80px;
+	}
+}
+
+/******************************************************************************************/
+/* Speciell CSS för skärmar som har en maxbredd på 600px. *********************************/
+/******************************************************************************************/
+@media screen and (max-width: 600px) {
+
+	header {
+		/* Bakgrundsbilden ska vara header600x400.jpg. */
+		background-image: url(../images/header600x400.jpg);
+	}
+}
+
+/******************************************************************************************/
+/* Speciell CSS för skärmar som har en maxbredd på 400px. *********************************/
+/******************************************************************************************/
+@media screen and (max-width: 400px) {
+
+	/* Alla <a> i <li> i <ul> som befinner sig i <nav>. */
+	nav ul li a {
+		/* Topp- och bottenpadding ska vara 0.5em. Vänster- och högerpadding ska vara 5px. */
+		padding: 0.5em 5px;
+	}
+
+	header {
+		/* Bakgrundsbilden ska vara header400x400.jpg. */
+		background-image: url(../images/header400x400.jpg);
+	}
+
+	/* Alla <p> som finns i <div>'en med id't "rightside" som befinner sig i <header>. */
+	header div#rightside p {
+		/* Toppmarginalen ska vara 50px. */
+		margin-top: 50px;
+	}
+
+	/* <main> */
+	main {
+		/* Ingen vänster- och högerpadding. */
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/*******************************************************************************************/
+/* Speciell CSS för utskrifter. ************************************************************/
+/*******************************************************************************************/
+
+@media print {
+
+	/* <header> och <footer> */
+	header, footer {
+		/* Rendera inte <header> och <footer>. */
+		display: none;
+	}
+
+	div#wrapper {
+		/* Rendera ingen skuggning. */
+		box-shadow: none;
+	}
+
+	/* <article> med id't "left" som befinner sig i <main>. */
+	main article#left {
+		/* 0px marginal över och under. */
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	main article#left img, main article#right img, main article#middle img {
+		display: none;
+	}
+
+	main article > p:nth-child(2) {
+		margin-top: 20px;
+	}
+}
